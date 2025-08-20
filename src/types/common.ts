@@ -36,6 +36,11 @@ export const WorkspaceResponseSchema = z.object({
   font: z.string().optional(),
   metaTitle: z.string().optional(),
   metaDescription: z.string().optional(),
+  label: z
+    .object({
+      individualTermPlural: z.string().optional(),
+    })
+    .optional(),
 });
 export type WorkspaceResponse = z.infer<typeof WorkspaceResponseSchema>;
 

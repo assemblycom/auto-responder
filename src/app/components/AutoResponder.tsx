@@ -25,7 +25,7 @@ import {
   SelectedDay,
   SettingsData,
 } from '@/constants';
-import { InternalUser, InternalUsers } from '@/types/common';
+import { InternalUser, InternalUsers, WorkspaceResponse } from '@/types/common';
 import { MenuItem, Select, SelectChangeEvent } from '@mui/material';
 
 const defaultSelectedDays: SelectedDay[] = [
@@ -60,6 +60,7 @@ interface Props {
   onSave(data: SettingsData): Promise<void>;
   activeSettings: SettingsData;
   internalUsers: InternalUsers;
+  workspace?: WorkspaceResponse;
 }
 
 const DropdownIndicator = (props: DropdownIndicatorProps<ITimezone, false, GroupBase<ITimezone>>) => {
@@ -153,7 +154,7 @@ const ValidationSchema = z.object({
   senderId: z.string().uuid().nullable(),
 });
 
-const AutoResponder = ({ onSave, activeSettings, internalUsers }: Props) => {
+const AutoResponder = ({ onSave, activeSettings, internalUsers, workspace }: Props) => {
   const defaultFormValues = useRef(activeSettings);
   const [saving, setSaving] = useState(false);
   const [workingHoursErrors, setWorkingHoursErrors] = useState<Record<number, string>>({});
@@ -293,7 +294,9 @@ const AutoResponder = ({ onSave, activeSettings, internalUsers }: Props) => {
             <div className="w-full max-w-[880px] mx-auto">
               <Fieldset
                 title="Auto-responder configuration"
-                info="Set up an automatic response to incoming messages in the Messages App. If clients send you several messages, auto-response will be sent at most once every hour (per message channel)."
+                info={`Set up an automatic response to incoming messages in the Messages App. If ${
+                  workspace?.label?.individualTermPlural || 'clients'
+                } send you several messages, auto-response will be sent at most once every hour (per message channel).`}
               >
                 <Typography text="Enable auto response" variant="label" className="mb-1.5 text-text" />
                 <Controller
