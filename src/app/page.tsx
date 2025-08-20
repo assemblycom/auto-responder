@@ -118,6 +118,7 @@ export default async function Page({ searchParams }: { searchParams: SearchParam
           ...populateSettingsFormData(setting as SettingResponse, currentUserId),
         }}
         internalUsers={internalUsersWithClientAccessLimitedFalse}
+        workspace={workspace}
       />
     </main>
   );
