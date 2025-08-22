@@ -295,7 +295,7 @@ const AutoResponder = ({ onSave, activeSettings, internalUsers, workspace }: Pro
               <Fieldset
                 title="Auto-responder configuration"
                 info={`Set up an automatic response to incoming messages in the Messages App. If ${
-                  workspace?.label?.individualTermPlural || 'clients'
+                  workspace?.labels?.individualTermPlural?.toLowerCase() || 'clients'
                 } send you several messages, auto-response will be sent at most once every hour (per message channel).`}
               >
                 <Typography text="Enable auto response" variant="label" className="mb-1.5 text-text" />

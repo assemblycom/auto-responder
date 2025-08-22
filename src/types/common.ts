@@ -36,7 +36,7 @@ export const WorkspaceResponseSchema = z.object({
   font: z.string().optional(),
   metaTitle: z.string().optional(),
   metaDescription: z.string().optional(),
-  label: z
+  labels: z
     .object({
       individualTermPlural: z.string().optional(),
     })
