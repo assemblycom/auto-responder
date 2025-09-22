@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Custom App',
-  description: 'Copilot Custom App Example',
+  description: 'Assembly Message Autoresponder app',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
