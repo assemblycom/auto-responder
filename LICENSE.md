@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 Copilot Platforms Inc.
+Copyright (c) 2024 - 2025 Copilot Platforms Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
