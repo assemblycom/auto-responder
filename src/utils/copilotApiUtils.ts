@@ -1,8 +1,7 @@
-import { copilotApi } from 'copilot-node-sdk';
-
+import { assemblyApi } from '@assembly-js/node-sdk';
 import { Message, SendMessageErrorResponse, SendMessageRequest } from '@/types/message';
 import appConfig from '@/config/app';
-import type { CopilotAPI as SDK } from 'copilot-node-sdk';
+import type { AssemblyAPI as SDK } from '@assembly-js/node-sdk';
 import {
   ClientResponse,
   ClientResponseSchema,
@@ -21,7 +20,7 @@ export class CopilotAPI {
   copilot: SDK;
 
   constructor(token: string) {
-    this.copilot = copilotApi({ apiKey: appConfig.copilotApiKey, token });
+    this.copilot = assemblyApi({ apiKey: appConfig.copilotApiKey, token });
   }
 
   async me(): Promise<MeResponse | null> {
