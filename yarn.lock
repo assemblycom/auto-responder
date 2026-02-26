@@ -20,6 +20,14 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@assembly-js/node-sdk@^3.19.1":
+  version "3.19.1"
+  resolved "https://registry.yarnpkg.com/@assembly-js/node-sdk/-/node-sdk-3.19.1.tgz#3d9ff79782250e9ee7f0afc43d050d205afdb3f8"
+  integrity sha512-8td1ks3Oj3aPmFGUXdoTC28fEH3t5keyDt4vTewfOBSZW3sW0Rxw7LP9oP4clw29KIeLQtM5BTpsP3I5VM0edw==
+  dependencies:
+    isomorphic-fetch "^3.0.0"
+    next "^14.0.2"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.23.5":
   version "7.23.5"
   resolved "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.23.5.tgz"
@@ -2797,14 +2805,6 @@ convert-source-map@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/convert-source-map/-/convert-source-map-2.0.0.tgz"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
-
-copilot-node-sdk@^3.5.1:
-  version "3.5.1"
-  resolved "https://registry.yarnpkg.com/copilot-node-sdk/-/copilot-node-sdk-3.5.1.tgz#99fb3db7b1f2e0f7574862b9cf5accebc161af3e"
-  integrity sha512-0qmmJJD0LMnORVxsbhqjtqEJ3f2d8TbY5BYXL2sDiNTi53QDuQuAwQUmHp8DZfqVbaTz9waZhgJMq5zL7c8BmA==
-  dependencies:
-    isomorphic-fetch "^3.0.0"
-    next "^14.0.2"
 
 core-js-compat@^3.31.0, core-js-compat@^3.33.1:
   version "3.34.0"
